@@ -1,0 +1,26 @@
+{
+    "name": "think-digital-agency/contao-grid-plugin",
+    "type": "contao-bundle",
+    "description": "Contao Grid Plugin — lightweight multi-breakpoint grid for Contao content elements. Adds column/offset settings to every content element and a grid wrapper start/stop pair, emitting Bootstrap-style col-* / offset-* classes. Replaces dma/dma_simple_grid without its multicolumnwizard dependency. Contao 5 and 6.",
+    "keywords": ["contao", "contao-bundle", "contao-extension", "grid", "layout", "columns", "bootstrap", "responsive"],
+    "homepage": "https://github.com/think-digital-agency/contao-grid-plugin",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Think Digital Agency",
+            "homepage": "https://think-digital.agency"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "contao/core-bundle": "^5.3 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThinkDigital\\ContaoGridPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "ThinkDigital\\ContaoGridPlugin\\ContaoManager\\Plugin"
+    }
+}

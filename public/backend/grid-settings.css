@@ -1,0 +1,130 @@
+/* Contao Grid Plugin — back-end widget (gridSettingsWizard) */
+
+.w-gs {
+    --w-gs-accent: #0594ff;            /* Live Preview blue */
+    --w-gs-track: rgba(125, 125, 125, .14);
+    --w-gs-div: rgba(125, 125, 125, .38);
+}
+
+.w-gs__row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 14px;
+}
+
+.w-gs__bp {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.w-gs__bp > strong {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    opacity: .55;
+}
+
+.w-gs__bp > select {
+    width: 4.75rem;
+    min-width: 4.75rem;
+}
+
+/* --- live preview ---------------------------------------------------------- */
+
+.w-gs__preview {
+    margin: 14px 0;
+}
+
+.w-gs__brow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 3px 0;
+}
+
+.w-gs__brow > b {
+    width: 2.2em;
+    font-size: 10px;
+    font-weight: 600;
+    opacity: .5;
+    text-align: right;
+}
+
+.w-gs__track {
+    position: relative;
+    flex: 1;
+    max-width: 320px;
+    height: 9px;
+    cursor: pointer;
+    background-color: var(--w-gs-track);
+    background-image: linear-gradient(90deg, var(--w-gs-div) 0 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
+    transition: box-shadow .1s;
+}
+
+.w-gs__track:hover {
+    box-shadow: inset 0 0 0 1px var(--w-gs-accent);
+}
+
+.w-gs__fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: var(--w-gs-accent);
+}
+
+/* translucent "where the mouse points" preview */
+.w-gs__hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(5, 148, 255, .22);
+    border-right: 2px solid var(--w-gs-accent);
+    transition: opacity .08s;
+}
+
+.w-gs__hover.is-active {
+    opacity: 1;
+}
+
+.w-gs__brow.is-hidden .w-gs__track {
+    cursor: not-allowed;
+}
+
+.w-gs__brow.is-hidden .w-gs__fill {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--w-gs-div),
+        var(--w-gs-div) 2px,
+        transparent 2px,
+        transparent 5px
+    );
+}
+
+.w-gs__brow > i {
+    font-size: 10px;
+    font-style: normal;
+    opacity: .5;
+    min-width: 4.5em;
+}
+
+/* --- class hint, right-aligned inside the CSS ID / class field's tl_help --- */
+
+.w-gs-csshint {
+    float: right;
+    margin-left: 14px;
+    opacity: .85;
+}
+
+.w-gs-csshint code {
+    background: var(--w-gs-track);
+    padding: 1px 5px;
+    border-radius: 3px;
+}

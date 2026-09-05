@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    ThinkDigital\ContaoGridPlugin\:
+        resource: '../../*'
+        exclude:
+            - '../../ContaoManager/'
+            - '../../DependencyInjection/'
+            - '../../ContaoGridPluginBundle.php'
+            - '../../Resources/'
+            - '../../Grid/GridConfig.php'
+            - '../../Widget/'

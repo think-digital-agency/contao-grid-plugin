@@ -1,0 +1,16 @@
+en:
+    title: Contao Grid Plugin
+    description: >
+        A lightweight multi-breakpoint grid for Contao content elements. Every element gets column and offset settings (xs–xl), plus a wrapper start/stop pair for grid rows.
+
+        Bootstrap-style output (col-*, offset-*). Drop-in replacement for dma/dma_simple_grid — without its MultiColumnWizard dependency. Field and element-type names are unchanged, so no content update is required. Compatible with Contao 5 and Contao 6.
+    keywords:
+        - grid
+        - layout
+        - columns
+        - offset
+        - bootstrap
+        - responsive
+    support:
+        issues: https://github.com/think-digital-agency/contao-grid-plugin/issues
+        docs: https://github.com/think-digital-agency/contao-grid-plugin#readme
