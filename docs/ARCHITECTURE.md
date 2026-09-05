@@ -11,8 +11,8 @@ contao-grid-plugin-bundle/
 │   ├── dca/tl_form_field.php            SQL-only legacy columns (feature not ported)
 │   └── languages/{de,en}/{default,tl_content}.php
 ├── docs/
-│   ├── ARCHITECTURE.md · DECISIONS.md · PUBLISHING.md
-│   └── package-metadata/{de,en}.yml   (logo.svg still TODO — WP-9)
+│   ├── ARCHITECTURE.md · DECISIONS.md
+│   └── package-metadata/{de,en,logo.svg}
 ├── public/backend/
 │   ├── grid-settings.css               back-end widget styles
 │   └── grid-settings.js                live preview + click/drag bars
@@ -63,6 +63,7 @@ call into this bundle. The bootstrap4 mapping matches on both sides.
 
 ## Value format
 
-`GridSettingsWizard` reads/writes exactly what DMA's single-row MultiColumnWizard
-did: `serialize([ ['xs' => '', 'sm' => '6', 'md' => '', 'lg' => '3', 'xl' => ''] ])`.
+`GridSettingsWizard` reads/writes exactly what the previous single-row
+MultiColumnWizard field did:
+`serialize([ ['xs' => '', 'sm' => '6', 'md' => '', 'lg' => '3', 'xl' => ''] ])`.
 So existing content needs no migration.

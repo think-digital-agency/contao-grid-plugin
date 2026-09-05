@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 use ThinkDigital\ContaoGridPlugin\Grid\GridClasses;
 
 /**
- * Grid wrapper (start) — native replacement for dma/dma_simple_grid's legacy
+ * Grid wrapper (start) — native replacement for the legacy
  * `dma_simplegrid_wrapper_start` content element. Type name kept unchanged so no
  * content migration is needed (CONTAO6_MIGRATION.md ADR-3 / ADR-14).
  *

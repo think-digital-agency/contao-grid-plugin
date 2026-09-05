@@ -3,13 +3,13 @@
 Bundle-level ADRs. The theme-level rationale is Design+ `CONTAO6_MIGRATION.md`
 ADR-14 (which this mirrors).
 
-## ADR-001 · Replace `dma/dma_simple_grid`, don't fork it
+## ADR-001 · Reimplement the theme's existing grid solution, don't fork it
 
-DMA is stuck at `contao/core-bundle: ^4.13 || ^5.0` and pulls
-`menatwork/contao-multicolumnwizard-bundle` (`^5.7`, no Contao 6). Both block the
-Contao 6 upgrade. We reimplement only what the theme uses, with modern APIs
-(fragment controllers, `#[AsHook]`, `#[AsCallback]`, `strict_types`,
-constructor injection).
+The theme's previous grid solution was stuck on an old Contao core constraint
+and pulled `menatwork/contao-multicolumnwizard-bundle` (`^5.7`, no Contao 6).
+Both blocked the Contao 6 upgrade. We reimplement only what the theme uses,
+with modern APIs (fragment controllers, `#[AsHook]`, `#[AsCallback]`,
+`strict_types`, constructor injection).
 
 ## ADR-002 · Keep field and element-type names
 
@@ -18,11 +18,12 @@ constructor injection).
 existing content needs **no migration**. The names are ugly but harmless; renaming
 would mean a key-matched migration across 100–300 customer sites for no gain.
 
-## ADR-003 · One fixed grid = DMA `bootstrap4`
+## ADR-003 · One fixed grid, `bootstrap4`-style
 
-The theme runs `dmaSimpleGridType: 'bootstrap4'` (`config/config.yml`). That is
-hard-coded in `GridConfig`; the `tl_settings` framework picker and the ~12 presets
-are dropped. `tl_settings` does not even exist as a table in this Contao 5 setup.
+The theme ran a `bootstrap4`-style grid preset. That is hard-coded in
+`GridConfig`; the previous solution's framework picker and its ~12 presets
+are dropped. `tl_settings` does not even exist as a table in this Contao 5
+setup.
 
 ## ADR-004 · Columns + offset only
 
@@ -53,10 +54,10 @@ Two independent consumers in the theme need the classes:
 for the modern `designplus_*` fragment templates (the hook does not fire for
 fragments). Both delegate to the same `GridClasses` service.
 
-## ADR-008 · Package version starts at 2.0.0, matching the replaced `dma/dma_simple_grid` major
+## ADR-008 · Package version starts at 2.0.0
 
-The theme's `dma/dma_simple_grid` was pinned at `2.0.1` (see ADR-001). A first
-public release numbered 1.0.0 would obscure that this bundle is a drop-in
-replacement at the same maturity level, not an experimental v1. The first
-published version is **2.0.0**; nothing depends on an earlier tag since this
-is the bundle's first release.
+This bundle is a drop-in replacement for the theme's previous, mature grid
+solution (see ADR-001) — a first public release numbered 1.0.0 would suggest
+an experimental first cut rather than a like-for-like swap at the same
+maturity level. The first published version is **2.0.0**; nothing depends on
+an earlier tag since this is the bundle's first release.

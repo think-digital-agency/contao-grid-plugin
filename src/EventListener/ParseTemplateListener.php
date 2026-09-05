@@ -10,8 +10,8 @@ use ThinkDigital\ContaoGridPlugin\Grid\GridClasses;
 
 /**
  * Appends the grid classes to `$template->class` for every legacy template that
- * carries grid settings — the same job dma/dma_simple_grid's `parseTemplate`
- * hook did.
+ * carries grid settings — the same job the predecessor grid solution's
+ * `parseTemplate` hook did.
  *
  * The theme relies on this for its legacy `.html.twig` templates that read the
  * flat `class` variable: block_searchable, block_unsearchable, mod_calendar and

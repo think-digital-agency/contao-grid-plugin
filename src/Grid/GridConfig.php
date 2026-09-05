@@ -7,9 +7,8 @@ namespace ThinkDigital\ContaoGridPlugin\Grid;
 /**
  * The single, hard-coded grid definition (CONTAO6_MIGRATION.md ADR-14).
  *
- * Mirrors the `bootstrap4` preset of dma/dma_simple_grid, which is the preset the
- * theme actually runs (`config/config.yml: dmaSimpleGridType: 'bootstrap4'`),
- * reduced to the two features in use: columns + offset.
+ * Mirrors the `bootstrap4` grid preset the theme actually runs, reduced to the
+ * two features in use: columns + offset.
  *
  *   xs             -> col-%d      / offset-%d
  *   sm|md|lg|xl     -> col-{bp}-%d / offset-{bp}-%d

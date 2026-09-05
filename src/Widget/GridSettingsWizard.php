@@ -13,9 +13,10 @@ use ThinkDigital\ContaoGridPlugin\Grid\GridConfig;
  * column resp. offset setting, plus a live preview (12-column bars, click/drag
  * editable) contributed by grid-settings.js.
  *
- * Drop-in replacement for the single-row MultiColumnWizard dma/dma_simple_grid
- * used, so `menatwork/contao-multicolumnwizard-bundle` can be removed. The value
- * is stored in the identical format: a:1:{i:0;a:5:{s:2:"xs";…}}.
+ * Drop-in replacement for the single-row MultiColumnWizard the predecessor
+ * grid solution used, so `menatwork/contao-multicolumnwizard-bundle` can be
+ * removed. The value is stored in the same format:
+ * a:1:{i:0;a:5:{s:2:"xs";…}}.
  */
 class GridSettingsWizard extends Widget
 {

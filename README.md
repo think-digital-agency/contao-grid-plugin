@@ -5,8 +5,8 @@
 **[English]** A lightweight multi-breakpoint grid for Contao content elements.
 Adds *column* and *offset* settings (xs–xl) to every content element and a grid
 *wrapper start / stop* pair, emitting Bootstrap-style `col-*` / `offset-*`
-classes. Drop-in replacement for `dma/dma_simple_grid` — **without** its
-`menatwork/contao-multicolumnwizard-bundle` dependency. Contao 5 and 6.
+classes. No MultiColumnWizard dependency, no framework picker — just one grid.
+Contao 5 and 6.
 
 ```bash
 composer require think-digital-agency/contao-grid-plugin
@@ -23,9 +23,9 @@ bekommt *Spalten-* und *Offset-Einstellungen* (xs–xl), dazu ein *Wrapper-Paar*
 - **Spalten-/Offset-Einstellungen** — zwei Felder (`gridSettingsWizard`, je fünf
   Breakpoint-Selects) werden in jede Inhaltselement-Palette mit `cssID`
   eingehängt. Gespeichert im Feld `dma_simplegrid_columnsettings` /
-  `dma_simplegrid_offsetsettings` (Namen aus DMA übernommen → keine Migration).
+  `dma_simplegrid_offsetsettings`.
 - **`simple_grid_classes()`** — Twig-Funktion, liefert die Grid-Klassen der
-  aktuellen Zeile (`context.data`). Name und Verhalten wie bei DMA.
+  aktuellen Zeile (`context.data`).
 - **`parseTemplate`-Hook** — hängt dieselben Klassen an `$template->class`, für
   Legacy-Templates die das flache `class` lesen.
 - **Wrapper `dma_simplegrid_wrapper_start` / `_stop`** — Fragment-Controller,
@@ -33,7 +33,7 @@ bekommt *Spalten-* und *Offset-Einstellungen* (xs–xl), dazu ein *Wrapper-Paar*
 
 ## Grid-Konfiguration
 
-Ein festes Grid (`GridConfig`), entspricht dem `bootstrap4`-Preset von DMA:
+Ein festes Grid (`GridConfig`), Bootstrap-Stil:
 
 | Breakpoint | Spalte      | Offset         |
 |------------|-------------|----------------|
@@ -41,23 +41,25 @@ Ein festes Grid (`GridConfig`), entspricht dem `bootstrap4`-Preset von DMA:
 | sm/md/lg/xl| `col-{bp}-N`| `offset-{bp}-N`|
 
 Spaltenwert `hide` → `d-{bp}-none`, Offsetwert `reset` → `offset[-{bp}]-0`.
-Kein Framework-Auswahl-Dialog (DMA `tl_settings`) — bewusst genau ein Grid.
+Kein Framework-Auswahl-Dialog — bewusst genau ein Grid.
 
 ## Voraussetzungen
 
 - PHP 8.2+
 - Contao 5.3 – 6.x
 
-## Migration von `dma/dma_simple_grid`
+## Installation
 
 ```bash
-composer remove dma/dma_simple_grid
 composer require think-digital-agency/contao-grid-plugin
 php bin/console cache:clear && php bin/console cache:warmup
 php bin/console contao:migrate
 ```
 
-Feld- und Elementtyp-Namen bleiben identisch → **kein** Content-Update nötig.
+Registriert sich automatisch über den Contao Manager Plugin. Feld- und
+Elementtyp-Namen (`dma_simplegrid_*`) sind absichtlich stabil gehalten, damit
+bereits bestehender Content ohne Update weiterläuft.
+
 Nicht portiert (0 Nutzung im Ziel-Theme): row-/column-Elemente, Formularfeld-
 Typen, push/pull/offset-right/block-grid/zusätzliche Klassen. Die zugehörigen
 Spalten bleiben erhalten (SQL-only) und werden von einer späteren Migration
@@ -65,7 +67,6 @@ entfernt.
 
 ## Lizenz
 
-LGPL-3.0-or-later — siehe [LICENSE](LICENSE). `dma/dma_simple_grid` (LGPL-3.0+)
-diente als Vorlage.
+LGPL-3.0-or-later — siehe [LICENSE](LICENSE).
 
 Entwickelt von [Think Digital Agency](https://think-digital.agency).

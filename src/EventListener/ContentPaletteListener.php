@@ -15,9 +15,9 @@ use ThinkDigital\ContaoGridPlugin\Grid\GridClasses;
 /**
  * Injects the grid column / offset settings into every content-element palette
  * that has a `cssID` field, shows the resulting grid classes in the element
- * list, and auto-creates the matching wrapper stop element — the jobs
- * dma/dma_simple_grid's DcaCallbacks did, reduced to columns + offset and the
- * wrapper pair (CONTAO6_MIGRATION.md ADR-14).
+ * list, and auto-creates the matching wrapper stop element — the jobs the
+ * predecessor grid solution's DcaCallbacks did, reduced to columns + offset
+ * and the wrapper pair (CONTAO6_MIGRATION.md ADR-14).
  */
 class ContentPaletteListener
 {
@@ -48,8 +48,8 @@ class ContentPaletteListener
     }
 
     /**
-     * Grey grid-class hint in front of the row operations (restores DMA's
-     * `show_simplegrid_infos`). The operation is registered in the DCA file.
+     * Grey grid-class hint in front of the row operations. The operation is
+     * registered in the DCA file.
      *
      * @param array<string, mixed> $row
      */

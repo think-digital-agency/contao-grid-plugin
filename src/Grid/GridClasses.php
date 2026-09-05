@@ -10,9 +10,10 @@ use Contao\StringUtil;
  * Builds the grid CSS classes for a tl_content / tl_form_field row from its
  * `dma_simplegrid_columnsettings` + `dma_simplegrid_offsetsettings` values.
  *
- * Behaviourally identical to DMA\DmaSimpleGrid::getColumnClasses() for the
- * `bootstrap4` preset with columns + offset enabled (CONTAO6_MIGRATION.md
- * ADR-14): all column classes first, then all offset classes, space-joined.
+ * Behaviourally identical to the predecessor grid solution's column-class
+ * builder for the `bootstrap4` preset with columns + offset enabled
+ * (CONTAO6_MIGRATION.md ADR-14): all column classes first, then all offset
+ * classes, space-joined.
  */
 final class GridClasses
 {
@@ -67,8 +68,9 @@ final class GridClasses
     }
 
     /**
-     * DMA stores a single-row MultiColumnWizard value: a:1:{i:0;a:5:{bp=>val}}.
-     * Returns the inner breakpoint=>value map, or [] for anything else.
+     * The field stores a single-row MultiColumnWizard value:
+     * a:1:{i:0;a:5:{bp=>val}}. Returns the inner breakpoint=>value map, or []
+     * for anything else.
      *
      * @return array<string, mixed>
      */

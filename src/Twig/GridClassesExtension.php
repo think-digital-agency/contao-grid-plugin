@@ -11,10 +11,11 @@ use Twig\TwigFunction;
 /**
  * Provides the `simple_grid_classes()` Twig function.
  *
- * Name and behaviour kept identical to dma/dma_simple_grid so the theme's native
- * `designplus_*` fragment templates (WP-3) keep working unchanged: it reads the
- * current element row from the template context (`data`) and returns the grid
- * classes, or '' when the element has no grid settings.
+ * Name and behaviour kept unchanged from the predecessor grid solution so the
+ * theme's native `designplus_*` fragment templates (WP-3) keep working
+ * unchanged: it reads the current element row from the template context
+ * (`data`) and returns the grid classes, or '' when the element has no grid
+ * settings.
  */
 final class GridClassesExtension extends AbstractExtension
 {
