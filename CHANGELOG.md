@@ -3,11 +3,13 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [1.0.0] - 2026-09-03
+## [2.0.0] - 2026-09-05
 
 Initial release — replaces `dma/dma_simple_grid` in the Contao Design+ theme
 (Contao 6 migration, WP-2). Removes the transitive
-`menatwork/contao-multicolumnwizard-bundle` dependency.
+`menatwork/contao-multicolumnwizard-bundle` dependency. Package version starts
+at 2.0.0, matching the major version of the `dma/dma_simple_grid` release
+(2.0.1) it replaces — see `docs/DECISIONS.md` ADR-008.
 
 ### Added
 - `GridConfig` / `GridClasses` — one fixed grid definition (DMA `bootstrap4`

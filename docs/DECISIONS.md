@@ -52,3 +52,11 @@ Two independent consumers in the theme need the classes:
 (`block_searchable`, `mod_calendar`, the wrapper), and `simple_grid_classes()`
 for the modern `designplus_*` fragment templates (the hook does not fire for
 fragments). Both delegate to the same `GridClasses` service.
+
+## ADR-008 · Package version starts at 2.0.0, matching the replaced `dma/dma_simple_grid` major
+
+The theme's `dma/dma_simple_grid` was pinned at `2.0.1` (see ADR-001). A first
+public release numbered 1.0.0 would obscure that this bundle is a drop-in
+replacement at the same maturity level, not an experimental v1. The first
+published version is **2.0.0**; nothing depends on an earlier tag since this
+is the bundle's first release.

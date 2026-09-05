@@ -21,6 +21,7 @@
         }
     },
     "extra": {
-        "contao-manager-plugin": "ThinkDigital\\ContaoGridPlugin\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "ThinkDigital\\ContaoGridPlugin\\ContaoManager\\Plugin",
+        "logo": "docs/app-icon.png"
     }
 }
