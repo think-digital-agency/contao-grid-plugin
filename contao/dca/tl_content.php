@@ -16,7 +16,7 @@ ArrayUtil::arrayInsert($GLOBALS['TL_DCA']['tl_content']['list']['operations'], 0
 ]);
 
 /*
- * Grid column / offset settings (CONTAO6_MIGRATION.md ADR-14). Field names kept
+ * Grid column / offset settings (see docs/DECISIONS.md). Field names kept
  * unchanged so existing content needs no migration; the palette injection
  * happens in ContentPaletteListener. The remaining dma_simplegrid_* columns
  * stay SQL-only elsewhere (theme DCA / ADR-4b) until a dedicated drop migration.

@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Grid wrapper (stop) — closes the four <div>s opened by
  * GridWrapperStartController. Type name `dma_simplegrid_wrapper_stop` unchanged
- * (CONTAO6_MIGRATION.md ADR-3 / ADR-14).
+ * (see docs/DECISIONS.md).
  */
 #[AsContentElement('dma_simplegrid_wrapper_stop', category: 'designplusPlugins', template: 'content_element/grid_wrapper_stop')]
 class GridWrapperStopController extends AbstractContentElementController

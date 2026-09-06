@@ -17,7 +17,7 @@ use ThinkDigital\ContaoGridPlugin\Grid\GridClasses;
  * that has a `cssID` field, shows the resulting grid classes in the element
  * list, and auto-creates the matching wrapper stop element — the jobs the
  * predecessor grid solution's DcaCallbacks did, reduced to columns + offset
- * and the wrapper pair (CONTAO6_MIGRATION.md ADR-14).
+ * and the wrapper pair (see docs/DECISIONS.md).
  */
 class ContentPaletteListener
 {

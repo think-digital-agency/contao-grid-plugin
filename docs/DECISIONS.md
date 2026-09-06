@@ -1,7 +1,7 @@
 # DECISIONS.md – Contao Grid Plugin
 
-Bundle-level ADRs. The theme-level rationale is Design+ `CONTAO6_MIGRATION.md`
-ADR-14 (which this mirrors).
+Bundle-level ADRs. These mirror the grid section of the Design+ theme's own
+`DECISIONS.md`.
 
 ## ADR-001 · Reimplement the theme's existing grid solution, don't fork it
 

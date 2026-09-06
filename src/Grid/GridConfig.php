@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace ThinkDigital\ContaoGridPlugin\Grid;
 
 /**
- * The single, hard-coded grid definition (CONTAO6_MIGRATION.md ADR-14).
+ * The single, hard-coded grid definition (see docs/DECISIONS.md).
  *
  * Mirrors the `bootstrap4` grid preset the theme actually runs, reduced to the
  * two features in use: columns + offset.

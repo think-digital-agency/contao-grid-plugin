@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 /*
  * The predecessor grid solution also added grid columns and form-field types
- * to tl_form_field. This bundle does not port the form-field feature (0 rows
- * in use, CONTAO6_MIGRATION.md ADR-14 / Q-2). The columns are kept SQL-only
+ * to tl_form_field. This bundle does not port the form-field feature (0 rows in use). The columns are kept SQL-only
  * for rollback safety (ADR-4b pattern) and dropped by a dedicated later
  * migration.
  */

@@ -12,7 +12,7 @@ use Contao\StringUtil;
  *
  * Behaviourally identical to the predecessor grid solution's column-class
  * builder for the `bootstrap4` preset with columns + offset enabled
- * (CONTAO6_MIGRATION.md ADR-14): all column classes first, then all offset
+ * (see docs/DECISIONS.md): all column classes first, then all offset
  * classes, space-joined.
  */
 final class GridClasses

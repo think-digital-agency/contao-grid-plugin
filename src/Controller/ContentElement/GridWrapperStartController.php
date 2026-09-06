@@ -16,7 +16,7 @@ use ThinkDigital\ContaoGridPlugin\Grid\GridClasses;
 /**
  * Grid wrapper (start) — native replacement for the legacy
  * `dma_simplegrid_wrapper_start` content element. Type name kept unchanged so no
- * content migration is needed (CONTAO6_MIGRATION.md ADR-3 / ADR-14).
+ * content migration is needed (see docs/DECISIONS.md).
  *
  * Reproduces the markup of the previous theme template
  * `templates/theme-design/ce_dma_simplegrid_wrapperstart.html.twig` byte-for-byte:

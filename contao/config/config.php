@@ -7,7 +7,7 @@ use ThinkDigital\ContaoGridPlugin\Widget\GridSettingsWizard;
 /*
  * Grid wrapper start/stop pair. The element types themselves are registered as
  * fragment controllers via #[AsContentElement]; only the wrapper nesting is
- * declared here (CONTAO6_MIGRATION.md ADR-13 / ADR-14). Type names are kept
+ * declared here (see docs/DECISIONS.md). Type names are kept
  * unchanged so no content migration is required.
  */
 $GLOBALS['TL_WRAPPERS']['start'][] = 'dma_simplegrid_wrapper_start';
