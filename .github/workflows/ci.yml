@@ -54,4 +54,8 @@ jobs:
           php-version: ${{ matrix.php }}
           coverage: none
       - run: composer require --no-update "contao/core-bundle:${{ matrix.contao }}"
-      - run: composer update --prefer-dist --no-interaction --no-progress
+      # --no-plugins: this only checks that dependencies resolve, it never
+      # serves the vendor/bundles assets that contao-components/installer (a
+      # Composer plugin) would publish — and composer's non-interactive
+      # allow-plugins prompt would otherwise hard-fail the install.
+      - run: composer update --prefer-dist --no-interaction --no-progress --no-plugins
